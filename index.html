@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>State Institute Digital Archive | MMTOTO Reports</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg-main: #0a0a0c;
+            --bg-card: #141417;
+            --accent-gold: #8b0000;
+            --accent-red: #ff4d4d;
+            --text-primary: #f8f9fa;
+            --text-secondary: #a0a0ab;
+            --glass-border: rgba(255, 255, 255, 0.05);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-primary);
+            margin: 0;
+            padding: 0;
+            background-image: radial-gradient(circle at 50% -20%, #2a0a0a 0%, #0a0a0c 80%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .logo-area h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin: 0;
+            background: linear-gradient(to right, #fff, var(--accent-red));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .update-pill {
+            display: inline-block;
+            background: rgba(139, 0, 0, 0.1);
+            color: var(--accent-red);
+            padding: 6px 16px;
+            border-radius: 100px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid rgba(139, 0, 0, 0.2);
+            margin-top: 15px;
+        }
+
+        .brand-section {
+            margin-bottom: 50px;
+        }
+
+        .brand-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .brand-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 3px;
+            background: var(--accent-gold);
+            box-shadow: 0 0 15px var(--accent-gold);
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin: 0;
+            letter-spacing: 0.5px;
+        }
+
+        .link-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 20px;
+        }
+
+        .link-card {
+            background: var(--bg-card);
+            border: 1px solid var(--glass-border);
+            padding: 24px;
+            border-radius: 16px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .link-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.03));
+            pointer-events: none;
+        }
+
+        .link-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(212, 175, 55, 0.4);
+            background: #1a1a1e;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 1.05rem;
+            font-weight: 600;
+            line-height: 1.4;
+            margin-bottom: 15px;
+            z-index: 1;
+        }
+
+        .meta-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1px solid var(--glass-border);
+            padding-top: 15px;
+            margin-top: auto;
+        }
+
+        .date {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .type-tag {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background: #222226;
+            padding: 4px 8px;
+            border-radius: 4px;
+            color: var(--text-secondary);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 80 - px;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--glass-border);
+            padding: 30px 0;
+        }
+
+        @media (max-width: 600px) {
+            .logo-area h1 {
+                font-size: 2rem;
+            }
+
+            .link-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo-area">
+                <h1>Reports Archive</h1>
+                <div class="update-pill">Last Synced: 14 March 2026</div>
+            </div>
+        </header>
+
+        <section class="brand-section">
+            <div class="brand-header">
+                <div class="brand-dot"></div>
+                <h2>State Institute MMTOTO Reports</h2>
+            </div>
+            <div class="link-grid">
+                <div class="link-card">
+                    <a
+                        href="./github/Respons-Digital-State-Institute-Pastikan-Integritas-Parameter-RTP-MMTOTO-Pasca-Gempa-Bandung-Hari-Ini.html">📊
+                        Respons Digital: Integritas Parameter RTP Pasca Gempa Bandung</a>
+                    <div class="meta-info">
+                        <span class="date">📅 14-03-2026</span>
+                        <span class="type-tag">GH-Pages</span>
+                    </div>
+                </div>
+                <div class="link-card">
+                    <a
+                        href="./github/Analisis-Transparansi-Meninjau-Etika-Algoritma-dan-Indeks-RTP-MMTOTO-Perspektif-Hak-Digital-2026.html">⚖️
+                        Analisis Transparansi: Etika Algoritma & Hak Digital 2026</a>
+                    <div class="meta-info">
+                        <span class="date">📅 14-03-2026</span>
+                        <span class="type-tag">GH-Pages</span>
+                    </div>
+                </div>
+                <div class="link-card">
+                    <a
+                        href="./github/Laporan-Dinamika-Efisiensi-Sinkronisasi-RTP-Real-Time-MMTOTO-Lonjakan-Trafik-Event-Celta-vs-Lyon.html">⚡
+                        Laporan Dinamika: Efisiensi Sinkronisasi RTP (Celta vs Lyon)</a>
+                    <div class="meta-info">
+                        <span class="date">📅 14-03-2026</span>
+                        <span class="type-tag">GH-Pages</span>
+                    </div>
+                </div>
+                <div class="link-card">
+                    <a
+                        href="./github/Studi-Empiris-Peran-Indeks-RTP-MMTOTO-Mendukung-Parameter-Ekonomi-Digital-Era-Transformasi-2026.html">🏦
+                        Studi Empiris: Peran RTP dalam Ekonomi Digital 2026</a>
+                    <div class="meta-info">
+                        <span class="date">📅 14-03-2026</span>
+                        <span class="type-tag">GH-Pages</span>
+                    </div>
+                </div>
+                <div class="link-card">
+                    <a
+                        href="./github/Laporan-Teknis-Validasi-Protokol-Keamanan-Data-dan-Akurasi-RTP-MMTOTO-Standar-Global.html">🛡️
+                        Validasi Protokol: Keamanan Data & Akurasi RTP Standar Global</a>
+                    <div class="meta-info">
+                        <span class="date">📅 14-03-2026</span>
+                        <span class="type-tag">GH-Pages</span>
+                    </div>
+                </div>
+                <div class="link-card">
+                    <a
+                        href="./github/Observasi-Sistematis-Analisis-Probabilitas-Terukur-dan-Dinamika-RTP-MMTOTO-Turnamen-UEFA-2026.html">⚽
+                        Observasi UEFA 2026: Analisis Probabilitas Terukur</a>
+                    <div class="meta-info">
+                        <span class="date">📅 14-03-2026</span>
+                        <span class="type-tag">GH-Pages</span>
+                    </div>
+                </div>
+                <div class="link-card">
+                    <a
+                        href="./github/Evaluasi-Strategis-State-Institute-Tinjau-Transparansi-Finansial-Mekanisme-RTP-MMTOTO-Modern.html">📖
+                        Evaluasi Strategis: Transparansi Finansial & Literasi Modern</a>
+                    <div class="meta-info">
+                        <span class="date">📅 14-03-2026</span>
+                        <span class="type-tag">GH-Pages</span>
+                    </div>
+                </div>
+                <div class="link-card">
+                    <a href="./github/Breaking-News-State-Institute-Rilis-Pembaruan-Protokol-RTP-MMTOTO-Versi-4-2.html">🚀
+                        Breaking News: Update Protokol RTP MMTOTO Versi 4.2</a>
+                    <div class="meta-info">
+                        <span class="date">📅 14-03-2026</span>
+                        <span class="type-tag">GH-Pages</span>
+                    </div>
+                </div>
+                <div class="link-card">
+                    <a
+                        href="./github/Tinjauan-Sektoral-Menilik-Komitmen-State-Institute-Etika-Digital-dan-Transparansi-RTP-MMTOTO.html">🤝
+                        Tinjauan Komitmen: Etika Digital & Transparansi Sektoral</a>
+                    <div class="meta-info">
+                        <span class="date">📅 14-03-2026</span>
+                        <span class="type-tag">GH-Pages</span>
+                    </div>
+                </div>
+                <div class="link-card">
+                    <a
+                        href="./github/Laporan-Pasar-2026-Signifikansi-Statistik-RTP-MMTOTO-Mendukung-Ekosistem-Digital-Kreatif-Indonesia.html">📈
+                        Laporan Pasar 2026: Signifikansi Statistik Ekosistem Kreatif</a>
+                    <div class="meta-info">
+                        <span class="date">📅 14-03-2026</span>
+                        <span class="type-tag">GH-Pages</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            &copy; 2026 State Institute Digital Report.
+        </footer>
+    </div>
+
+</body>
+
+</html>
